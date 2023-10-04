@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Rechner2.ViewModels"
+             x:Class="Rechner2.MainPage" 
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto" 
+          ColumnDefinitions="120,*">
+
+        <Label Text="Rechner" HorizontalTextAlignment="Center"
+               FontSize="Large" TextColor="{StaticResource Primary}"
+               Grid.ColumnSpan="2"/>
+
+        <Label  Grid.Row="1" Grid.ColumnSpan="2"
+                HorizontalTextAlignment="Start"
+            Margin="10" FontSize="Medium"
+            Padding="10"
+           TextColor="{StaticResource White}"
+            Text="{Binding Feedback}"/>
+
+        <Label Grid.Row="2"
+            HorizontalTextAlignment="Center"
+            Margin="10" FontSize="20"
+            Padding="10"
+           Grid.Column="1"
+            Text="Angabe"/>
+        <Label Text="{Binding Angabe}" Grid.Row="2" Grid.Column="1"/>
+
+
+
+        <Label Grid.Row="3"
+            HorizontalTextAlignment="Center"
+            Margin="10" FontSize="20"
+            Padding="10"
+            Text="Angabe"/>
+        <Entry Text="{Binding Eingabe}"
+       Keyboard="Numeric"
+       ReturnCommand="{Binding CheckCommand}"
+       Grid.Row="3" Grid.Column="1"/>
+
+
+
+
+
+
+
+
+    </Grid>
+
+    
+</ContentPage>

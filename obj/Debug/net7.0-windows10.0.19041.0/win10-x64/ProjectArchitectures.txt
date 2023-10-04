@@ -1,0 +1,1 @@
+C:\Visual studio 22\Rechner2\Rechner2.csproj;x64
